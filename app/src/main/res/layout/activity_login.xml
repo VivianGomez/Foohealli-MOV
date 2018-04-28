@@ -94,22 +94,6 @@
                 android:layout_height="wrap_content"
                 android:text="REGISTRARSE" />
 
-            <Button
-                android:id="@+id/buttonExamenes"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Examenes" />
-
-            <Button
-                android:id="@+id/buttonAntiguo"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Antiguo" />
-
-
-
-
-
 
         </LinearLayout>
     </ScrollView>

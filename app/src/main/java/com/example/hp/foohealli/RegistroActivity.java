@@ -1,6 +1,5 @@
 package com.example.hp.foohealli;
 
-import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
 import android.app.LoaderManager.LoaderCallbacks;
@@ -26,6 +25,7 @@ import android.view.inputmethod.EditorInfo;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -43,50 +43,45 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.EmptyStackException;
 import java.util.List;
 
 import static android.Manifest.permission.READ_CONTACTS;
 
-/**
- * A login screen that offers login via email/password.
- */
-public class LoginActivity extends AppCompatActivity {
-
-
-    // UI references.
-    private AutoCompleteTextView mEmailView;
-    private EditText mPasswordView;
-    private View mProgressView;
-    private View mLoginFormView;
+public class RegistroActivity extends AppCompatActivity{
 
     Button ingresar, registrarse;
-    EditText correo, password;
+    EditText nombres, apellidos, edad, peso,email, clave, estadio;
+    CheckBox ckEstadio;
 
     FirebaseAuth.AuthStateListener mAuthListener;
 
-
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        ingresar = (Button)findViewById(R.id.btn_login);
-        registrarse = (Button)findViewById(R.id.btn_registro);
-        correo = (EditText)findViewById(R.id.email);
-        password = (EditText)findViewById(R.id.password);
+        ingresar = (Button)findViewById(R.id.btn_ingresar);
+        registrarse = (Button)findViewById(R.id.btn_registrarse);
+        nombres = (EditText)findViewById(R.id.txt_nombres);
+        apellidos = (EditText)findViewById(R.id.txt_apellidos);
+        edad = (EditText)findViewById(R.id.txt_edad);
+        peso = (EditText)findViewById(R.id.txt_peso);
+        clave = (EditText)findViewById(R.id.txt_clave);
+        email = (EditText)findViewById(R.id.txt_email);
+        estadio = (EditText)findViewById(R.id.txt_estadio);
+        ckEstadio = (CheckBox)findViewById(R.id.ck_estadio);
 
-        ingresar.setOnClickListener(new OnClickListener() {
+        ingresar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String email = correo.getText().toString();
-                String clave = password.getText().toString();
-                iniciarSesion(email, clave);
+                ingresar();
             }
         });
-        registrarse.setOnClickListener(new OnClickListener() {
+        registrarse.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                registrarse();;
+                registrarse();
+                pedirExamenes();
             }
         });
 
@@ -146,34 +141,16 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void registrarse(){
-        Intent pantallaRegistro = new Intent(this,RegistroActivity.class);
-        startActivity(pantallaRegistro);
+
     }
 
-    private void iniciarSesion(String email, String clave){
-        FirebaseAuth.getInstance().signInWithEmailAndPassword(email, clave).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-            @Override
-            public void onComplete(@NonNull Task<AuthResult> task) {
-                if (task.isSuccessful()) {
-                    Log.i("SESION", "sesion iniciada");
-                } else {
-                    Log.i("SESION", task.getException().getMessage() + "");
-                }
-            }
-            ;
-        });
+    private void ingresar(){
+        Intent pantallaIngreso =new Intent(this,LoginActivity.class);
+        startActivity(pantallaIngreso);
     }
 
-    protected void onStart(){
-        super.onStart();
-        FirebaseAuth.getInstance().addAuthStateListener(mAuthListener);
-    }
-
-    protected void onStop(){
-        super.onStop();
-        if(mAuthListener != null){
-            FirebaseAuth.getInstance().removeAuthStateListener(mAuthListener);
-        }
+    private void pedirExamenes(){
+        Intent pantallaExamenes =new Intent(this,Examenes.class);
+        startActivity(pantallaExamenes);
     }
 }
-
