@@ -15,7 +15,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="20dp"
+            android:layout_height="15dp"
             android:orientation="horizontal"></LinearLayout>
 
         <ImageView
@@ -54,8 +54,18 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="15dp"
-            android:orientation="horizontal"></LinearLayout>
+            android:layout_height="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="Consigue recetas para cada comida"
+                android:textColor="@android:color/background_dark" />
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -63,18 +73,11 @@
             android:orientation="horizontal">
 
             <ImageButton
-                android:id="@+id/imageButton3"
-                android:layout_width="wrap_content"
-                android:layout_height="140dp"
-                android:layout_weight="1"
-                app:srcCompat="#fd8585" />
-
-            <ImageButton
                 android:id="@+id/imageButton"
                 android:layout_width="wrap_content"
                 android:layout_height="140dp"
                 android:layout_weight="1"
-                app:srcCompat="#edac61" />
+                app:srcCompat="@android:color/holo_orange_dark" />
         </LinearLayout>
 
         <LinearLayout
@@ -87,14 +90,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="140dp"
                 android:layout_weight="1"
-                app:srcCompat="#f1c877" />
+                app:srcCompat="@android:color/holo_orange_light" />
 
-            <ImageButton
-                android:id="@+id/imageButton2"
-                android:layout_width="wrap_content"
-                android:layout_height="140dp"
-                android:layout_weight="1"
-                app:srcCompat="#c4d986" />
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -102,18 +99,11 @@
             android:orientation="horizontal">
 
             <ImageButton
-                android:id="@+id/imageButton6"
-                android:layout_width="wrap_content"
-                android:layout_height="140dp"
-                android:layout_weight="1"
-                app:srcCompat="#c0e3ef" />
-
-            <ImageButton
                 android:id="@+id/imageButton5"
                 android:layout_width="wrap_content"
                 android:layout_height="140dp"
                 android:layout_weight="1"
-                app:srcCompat="#8fd7e2" />
+                app:srcCompat="@android:color/holo_blue_bright" />
         </LinearLayout>
 
 

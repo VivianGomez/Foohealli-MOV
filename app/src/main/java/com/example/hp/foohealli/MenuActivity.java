@@ -43,7 +43,7 @@ public class MenuActivity extends AppCompatActivity {
         botonMedicinas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                pedirMedicinas();
+                pedirCocina();
             }
         });
 
@@ -76,17 +76,17 @@ public class MenuActivity extends AppCompatActivity {
     }
 
     private void pedirMenus(){
-        Intent pantallaPerfil =new Intent(this,ProfileActivity.class);
+        Intent pantallaPerfil =new Intent(this,RecetasActivity.class);
         startActivity(pantallaPerfil);
     }
 
-    private void pedirMedicinas(){
-        Intent pantallaPerfil =new Intent(this,ProfileActivity.class);
+    private void pedirCocina(){
+        Intent pantallaPerfil =new Intent(this,CocinaActivity.class);
         startActivity(pantallaPerfil);
     }
 
     private void pedirConsultas(){
-        Intent pantallaPerfil =new Intent(this,ProfileActivity.class);
+        Intent pantallaPerfil =new Intent(this,ConsultasActivity.class);
         startActivity(pantallaPerfil);
     }
 
