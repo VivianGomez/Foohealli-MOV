@@ -6,6 +6,7 @@ public class Alimento {
 
     private String nombre;
     private ArrayList<String> categorias;
+    private String imagen;
 
     //APORTE POR RACIÓN
     private double proteina; //en g
@@ -35,9 +36,10 @@ public class Alimento {
     public Alimento() {
     }
 
-    public Alimento(String nombre, ArrayList<String> categorias, double proteina, double hidratosCarbono, double fibra, double grasaTotal, double colesterol, double alcohol, double agua, double calcio, double hierro, double sodio, double potasio, double fosforo, double vitaminaD, double vitaminaA, double vitaminaC) {
+    public Alimento(String nombre, ArrayList<String> categorias, String imagen, double proteina, double hidratosCarbono, double fibra, double grasaTotal, double colesterol, double alcohol, double agua, double calcio, double hierro, double sodio, double potasio, double fosforo, double vitaminaD, double vitaminaA, double vitaminaC) {
         this.nombre = nombre;
         this.categorias = categorias;
+        this.imagen = imagen;
         this.proteina = proteina;
         this.hidratosCarbono = hidratosCarbono;
         this.fibra = fibra;
@@ -65,6 +67,14 @@ public class Alimento {
 
     public ArrayList<String> getCategorias() {
         return categorias;
+    }
+
+    public String getImagen() {
+        return imagen;
+    }
+
+    public void setImagen(String imagen) {
+        this.imagen = imagen;
     }
 
     public void setCategorias(ArrayList<String> categorias) {
