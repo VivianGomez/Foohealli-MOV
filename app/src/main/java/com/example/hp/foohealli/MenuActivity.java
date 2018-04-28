@@ -91,7 +91,7 @@ public class MenuActivity extends AppCompatActivity {
     }
 
     private void pedirProgreso(){
-        Intent pantallaPerfil =new Intent(this,ProfileActivity.class);
+        Intent pantallaPerfil =new Intent(this,ProgresoActivity.class);
         startActivity(pantallaPerfil);
     }
 }
