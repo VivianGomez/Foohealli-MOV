@@ -78,14 +78,21 @@
             </android.support.design.widget.TextInputLayout>
 
             <Button
-                android:id="@+id/email_sign_in_button"
+                android:id="@+id/btn_login"
                 style="?android:textAppearanceSmall"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:gravity="center_vertical|center_horizontal"
-                android:text="@string/action_sign_in"
+                android:text="INGRESAR"
                 android:textStyle="bold" />
+
+
+            <Button
+                android:id="@+id/btn_registro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="REGISTRARSE" />
 
             <Button
                 android:id="@+id/buttonExamenes"
@@ -98,6 +105,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Antiguo" />
+
+
+
+
+
 
         </LinearLayout>
     </ScrollView>
