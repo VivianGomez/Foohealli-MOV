@@ -9,16 +9,18 @@ public class Receta {
     private String notasYrecomendaciones;
     private ArrayList<Ingrediente> ingredientes;
     private String comidaDelDia;
+    private String imagen;
 
     public Receta() {
     }
 
-    public Receta(String nombre, String descripcion, String notasYrecomendaciones, ArrayList<Ingrediente> ingredientes, String comidaDelDia) {
+    public Receta(String nombre, String descripcion, String notasYrecomendaciones, ArrayList<Ingrediente> ingredientes, String comidaDelDia, String imagen) {
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.notasYrecomendaciones = notasYrecomendaciones;
         this.ingredientes = ingredientes;
         this.comidaDelDia = comidaDelDia;
+        this.imagen = imagen;
     }
 
     public String getNombre() {
@@ -59,5 +61,13 @@ public class Receta {
 
     public void setNotasYrecomendaciones(String notasYrecomendaciones) {
         this.notasYrecomendaciones = notasYrecomendaciones;
+    }
+
+    public String getImagen() {
+        return imagen;
+    }
+
+    public void setImagen(String imagen) {
+        this.imagen = imagen;
     }
 }
