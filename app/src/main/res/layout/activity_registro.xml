@@ -52,7 +52,7 @@
                     android:id="@+id/txt_nombres"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/prompt_email"
+                    android:hint="Nombres"
                     android:inputType="text"
                     android:maxLines="1"
                     android:singleLine="true" />
@@ -67,7 +67,7 @@
                     android:id="@+id/txt_apellidos"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/prompt_email"
+                    android:hint="Apellidos"
                     android:inputType="text"
                     android:maxLines="1"
                     android:singleLine="true" />
@@ -82,7 +82,7 @@
                     android:id="@+id/txt_edad"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/prompt_email"
+                    android:hint="Edad"
                     android:inputType="number"
                     android:maxLines="1"
                     android:singleLine="true" />
@@ -97,7 +97,7 @@
                     android:id="@+id/txt_peso"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/prompt_email"
+                    android:hint="Peso"
                     android:inputType="number"
                     android:maxLines="1"
                     android:singleLine="true" />
@@ -152,11 +152,11 @@
                     android:id="@+id/txt_estadio"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/prompt_password"
+                    android:hint="Estadío"
                     android:imeActionId="6"
                     android:imeActionLabel="@string/action_sign_in_short"
                     android:imeOptions="actionUnspecified"
-                    android:inputType="text"
+                    android:inputType="number"
                     android:maxLines="1"
                     android:singleLine="true" />
 

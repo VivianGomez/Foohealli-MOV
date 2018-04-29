@@ -58,7 +58,7 @@ public class RegistroActivity extends AppCompatActivity{
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_registro);
 
         ingresar = (Button)findViewById(R.id.btn_ingresar);
         registrarse = (Button)findViewById(R.id.btn_registrarse);
@@ -104,23 +104,7 @@ public class RegistroActivity extends AppCompatActivity{
         DatabaseReference referenciaAlimento = database.getReference(FirebaseReferences.ALIMENTO_REFERENCE);
 
         DatabaseReference referenciaUsuarios = database.getReference(FirebaseReferences.USUARIOS_REFERENCE);
-        DatabaseReference referenciaUsuario = database.getReference(FirebaseReferences.USUARIO_REFERENCE);
-        Log.i("KEY",referenciaUsuario.getKey());
 
-        referenciaUsuarios.child(FirebaseReferences.USUARIO_REFERENCE).addValueEventListener(new ValueEventListener() {
-
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                Usuario usuario = dataSnapshot.getValue(Usuario.class);
-                //esto me devuelve todo el objeto usuario
-                Log.i("USUARIO:", dataSnapshot.toString());
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-
-            }
-        });
 
         /*
         el metodo addValueEventListener permite la actualización inmediata de los datos, en tiempo real,

@@ -55,11 +55,6 @@ public class LoginActivity extends AppCompatActivity {
 
 
     // UI references.
-    private AutoCompleteTextView mEmailView;
-    private EditText mPasswordView;
-    private View mProgressView;
-    private View mLoginFormView;
-
     Button ingresar, registrarse;
     EditText correo, password;
 
@@ -106,27 +101,7 @@ public class LoginActivity extends AppCompatActivity {
         //firebase utiliza archivos singleton por lo que siempre usa un archivo para todas las referencias
         FirebaseDatabase database = FirebaseDatabase.getInstance();
 
-        //referencia a los datos para poder accederlos
-        DatabaseReference referenciaAlimento = database.getReference(FirebaseReferences.ALIMENTO_REFERENCE);
-
-        DatabaseReference referenciaUsuarios = database.getReference(FirebaseReferences.USUARIOS_REFERENCE);
-        DatabaseReference referenciaUsuario = database.getReference(FirebaseReferences.USUARIO_REFERENCE);
-        Log.i("KEY",referenciaUsuario.getKey());
-
-        referenciaUsuarios.child(FirebaseReferences.USUARIO_REFERENCE).addValueEventListener(new ValueEventListener() {
-
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                Usuario usuario = dataSnapshot.getValue(Usuario.class);
-                //esto me devuelve todo el objeto usuario
-                Log.i("USUARIO:", dataSnapshot.toString());
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-
-            }
-        });
+        DatabaseReference refUsuarios = database.getReference(FirebaseReferences.USUARIOS_REFERENCE);
 
         /*
         el metodo addValueEventListener permite la actualización inmediata de los datos, en tiempo real,
