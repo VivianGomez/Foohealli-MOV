@@ -102,7 +102,7 @@
             android:orientation="horizontal">
 
             <ImageButton
-                android:id="@+id/imageButton6"
+                android:id="@+id/imageButtonConsulta"
                 android:layout_width="wrap_content"
                 android:layout_height="140dp"
                 android:layout_weight="1"
