@@ -8,6 +8,7 @@ public class Usuario {
 
     private String nombres;
     private String apellidos;
+    private String correo;
     private int edad;
     private int peso;
     private int sexo;
@@ -17,14 +18,20 @@ public class Usuario {
     public Usuario() {
     }
 
-    public Usuario(String nombres, String apellidos, int edad, int peso, ExamenesMedicos examenes, int sexo) {
+    public Usuario(String correo, String nombres, String apellidos, int edad, int peso, int sexo) {
+        this.correo = correo;
         this.nombres = nombres;
         this.apellidos = apellidos;
         this.edad = edad;
         this.peso = peso;
         this.sexo = sexo;
-        this.examenes = examenes;
+        this.examenes = null;
+        this.estadio = 0;
     }
+
+    public String getCorreo() { return correo;   }
+
+    public void setCorreo(String correo){ this.correo = correo;};
 
     public String getNombres() {
         return nombres;

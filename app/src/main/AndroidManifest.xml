@@ -23,6 +23,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".Examenes" />
+        <activity android:name=".RegistroActivity" />
         <activity android:name=".MenuActivity" />
         <activity android:name=".ProfileActivity" />
         <activity android:name=".ProgresoActivity" />
