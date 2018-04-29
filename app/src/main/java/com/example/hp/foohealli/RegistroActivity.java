@@ -2,7 +2,9 @@ package com.example.hp.foohealli;
 
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
+import android.app.Instrumentation;
 import android.app.LoaderManager.LoaderCallbacks;
+import android.app.ProgressDialog;
 import android.content.CursorLoader;
 import android.content.Intent;
 import android.content.Loader;
@@ -27,7 +29,9 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.hp.foohealli.objetos.FirebaseReferences;
 import com.example.hp.foohealli.objetos.Usuario;
@@ -51,14 +55,19 @@ import static android.Manifest.permission.READ_CONTACTS;
 public class RegistroActivity extends AppCompatActivity{
 
     Button ingresar, registrarse;
-    EditText nombres, apellidos, edad, peso,email, clave, estadio;
-    CheckBox ckEstadio;
+    EditText nombres, apellidos, edad, peso,email, clave, estadio, sexo;
+
+    ProgressDialog mProgress;
+
+    FirebaseAuth mAuth;
 
     FirebaseAuth.AuthStateListener mAuthListener;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registro);
+
+        mAuth = FirebaseAuth.getInstance();
 
         ingresar = (Button)findViewById(R.id.btn_ingresar);
         registrarse = (Button)findViewById(R.id.btn_registrarse);
@@ -69,7 +78,9 @@ public class RegistroActivity extends AppCompatActivity{
         clave = (EditText)findViewById(R.id.txt_clave);
         email = (EditText)findViewById(R.id.txt_email);
         estadio = (EditText)findViewById(R.id.txt_estadio);
-        ckEstadio = (CheckBox)findViewById(R.id.ck_estadio);
+        sexo = (EditText)findViewById(R.id.txt_sexo);
+
+        mProgress = new ProgressDialog(this);
 
         ingresar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -81,7 +92,6 @@ public class RegistroActivity extends AppCompatActivity{
             @Override
             public void onClick(View v) {
                 registrarse();
-                pedirExamenes();
             }
         });
 
@@ -125,7 +135,46 @@ public class RegistroActivity extends AppCompatActivity{
     }
 
     private void registrarse(){
+        final String nombre = nombres.getText().toString().trim();
+        final String apellido = apellidos.getText().toString().trim();
+        final int age = Integer.parseInt(edad.getText().toString().trim());
+        final int weight = Integer.parseInt(peso.getText().toString().trim());
+        final String correo = email.getText().toString().trim();
+        final String pass = clave.getText().toString().trim();
+        int temp;
+        if(sexo.getText().toString().equalsIgnoreCase("Masculino")){
+            temp = 1;
+        }else{
+            temp = 2;
+        }
+        final int sex = temp;
+        Usuario user = new Usuario(correo,nombre,apellido,age,weight,sex);
 
+        if(!TextUtils.isEmpty(nombre)&&!TextUtils.isEmpty(apellido)&&!TextUtils.isEmpty(correo)&&!TextUtils.isEmpty(pass)){
+            mProgress.setMessage("Registrando, espera un momento");
+            mProgress.show();
+            mAuth.createUserWithEmailAndPassword(correo, pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                @Override
+                public void onComplete(@NonNull Task<AuthResult> task) {
+                    mProgress.dismiss();
+                    if (task.isSuccessful()){
+                        mAuth.signInWithEmailAndPassword(correo, pass);
+                        DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference().child("usuarios");
+                        DatabaseReference currentUserDB = mDatabase.child(mAuth.getCurrentUser().getUid());
+                        currentUserDB.child("nombres").setValue(nombre);
+                        currentUserDB.child("apellidos").setValue(apellido);
+                        currentUserDB.child("edad").setValue(age);
+                        currentUserDB.child("peso").setValue(weight);
+                        currentUserDB.child("correo").setValue(correo);
+                        currentUserDB.child("examenes").setValue(null);
+                        currentUserDB.child("estadio").setValue(0+"s");
+                        pedirExamenes();
+                    }else{
+                        Log.i("REGISTRO","No fué posible regstrar el usuario");
+                    }
+                }
+            });
+        }
     }
 
     private void ingresar(){

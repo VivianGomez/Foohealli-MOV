@@ -126,12 +126,18 @@ public class LoginActivity extends AppCompatActivity {
         startActivity(pantallaRegistro);
     }
 
+    private void iraMenu(){
+        Intent pantallaMenu = new Intent(this,MenuActivity.class);
+        startActivity(pantallaMenu);
+    }
+
     private void iniciarSesion(String email, String clave){
         FirebaseAuth.getInstance().signInWithEmailAndPassword(email, clave).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
                     Log.i("SESION", "sesion iniciada");
+                    iraMenu();
                 } else {
                     Log.i("SESION", task.getException().getMessage() + "");
                 }
