@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 
 public class MenuActivity extends AppCompatActivity {
@@ -13,7 +14,7 @@ public class MenuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
-        ImageButton botonPerfil = (ImageButton) findViewById(R.id.imageButton3);
+        Button botonPerfil = (Button) findViewById(R.id.button2);
         botonPerfil.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -22,7 +23,7 @@ public class MenuActivity extends AppCompatActivity {
         });
 
 
-        ImageButton botonMenus = (ImageButton) findViewById(R.id.imageButton);
+        Button botonMenus = (Button) findViewById(R.id.button3);
         botonMenus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -30,7 +31,7 @@ public class MenuActivity extends AppCompatActivity {
             }
         });
 
-        ImageButton botonExamenes = (ImageButton) findViewById(R.id.imageButton4);
+        Button botonExamenes = (Button) findViewById(R.id.button4);
         botonExamenes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -39,24 +40,18 @@ public class MenuActivity extends AppCompatActivity {
         });
 
 
-        ImageButton botonMedicinas = (ImageButton) findViewById(R.id.imageButton2);
+        Button botonMedicinas = (Button) findViewById(R.id.button5);
         botonMedicinas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                pedirMedicinas();
+                pedirCasa();
             }
         });
 
 
-        ImageButton botonConsulta = (ImageButton) findViewById(R.id.imageButton6);
-        botonConsulta.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                pedirConsultas();
-            }
-        });
+        Button botonConsulta = (Button) findViewById(R.id.button6);
 
-        ImageButton botonProgreso = (ImageButton) findViewById(R.id.imageButton5);
+        Button botonProgreso = (Button) findViewById(R.id.button7);
         botonProgreso.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -76,22 +71,18 @@ public class MenuActivity extends AppCompatActivity {
     }
 
     private void pedirMenus(){
-        Intent pantallaPerfil =new Intent(this,ProfileActivity.class);
+        Intent pantallaPerfil =new Intent(this,RecetasActivity.class);
         startActivity(pantallaPerfil);
     }
 
-    private void pedirMedicinas(){
-        Intent pantallaPerfil =new Intent(this,ProfileActivity.class);
+    private void pedirCasa(){
+        Intent pantallaPerfil =new Intent(this,CasaActivity.class);
         startActivity(pantallaPerfil);
     }
 
-    private void pedirConsultas(){
-        Intent pantallaPerfil =new Intent(this,ProfileActivity.class);
-        startActivity(pantallaPerfil);
-    }
 
     private void pedirProgreso(){
-        Intent pantallaPerfil =new Intent(this,ProfileActivity.class);
+        Intent pantallaPerfil =new Intent(this,ProgresoActivity.class);
         startActivity(pantallaPerfil);
     }
 }

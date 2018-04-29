@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MenuActivity">
+    tools:context=".RecetasActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,7 +15,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="20dp"
+            android:layout_height="15dp"
             android:orientation="horizontal"></LinearLayout>
 
         <ImageView
@@ -54,31 +54,8 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="15dp"
-            android:orientation="horizontal"></LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="142dp"
+            android:layout_height="13dp"
             android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/button2"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="PERFIL"
-                tools:background="#e9f76262"
-                tools:drawableTop="@mipmap/profile" />
-
-            <Button
-                android:id="@+id/button3"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:drawableTop="@mipmap/menu"
-                android:text="MENÚS"
-                tools:background="#f5f9ad55" />
 
         </LinearLayout>
 
@@ -88,48 +65,39 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/button4"
-                android:layout_width="157dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:drawableTop="@mipmap/examenes"
-                android:text="EXÁMENES"
-                tools:background="#e9fbba37" />
-
-            <Button
-                android:id="@+id/button5"
+                android:id="@+id/button8"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="#c899cc00"
-                android:drawableTop="@mipmap/nevera"
-                android:text="¿QUE TENGO EN CASA?" />
+                android:background="#c04acdf9"
+                android:text="DESAYUNO" />
+        </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="142dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button9"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#c5c6f33d"
+                android:text="ALMUERZO" />
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="154dp"
             android:orientation="horizontal">
 
-
             <Button
-                android:id="@+id/button6"
-                android:layout_width="92dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:drawableTop="@mipmap/consulta"
-                android:text="CONSULTA DE ALIMENTOS"
-                tools:background="#dc5ebede" />
-
-            <Button
-                android:id="@+id/button7"
+                android:id="@+id/button10"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="#ddd69df2"
-                android:drawableTop="@mipmap/estat"
-                android:text="PROGRESO" />
-
+                android:background="#d692c52e"
+                android:text="CENA" />
         </LinearLayout>
 
 
