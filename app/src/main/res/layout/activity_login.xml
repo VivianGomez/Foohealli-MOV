@@ -82,26 +82,19 @@
             </android.support.design.widget.TextInputLayout>
 
             <Button
-                android:id="@+id/email_sign_in_button"
-                style="?android:textAppearanceSmall"
+                android:id="@+id/btn_login"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:gravity="center_vertical|center_horizontal"
-                android:text="Registrarse/iniciar sesión"
-                android:textStyle="bold" />
+                android:text="INGRESAR" />
 
             <Button
-                android:id="@+id/buttonExamenes"
+                android:id="@+id/btn_registro"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Examenes" />
+                android:text="REGISTRARSE" />
 
-            <Button
-                android:id="@+id/buttonAntiguo"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Antiguo" />
 
         </LinearLayout>
     </ScrollView>
