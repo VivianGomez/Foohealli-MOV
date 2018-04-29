@@ -31,8 +31,13 @@
         <activity android:name=".MenuActivity" />
         <activity android:name=".ProfileActivity" />
         <activity android:name=".ConsultaAlimentos">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
+
         <activity android:name=".ProgresoActivity" />
         <activity android:name=".RecetasActivity" />
         <activity android:name=".CasaActivity" />

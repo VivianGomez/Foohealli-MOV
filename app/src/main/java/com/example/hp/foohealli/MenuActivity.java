@@ -50,6 +50,12 @@ public class MenuActivity extends AppCompatActivity {
 
 
         Button botonConsulta = (Button) findViewById(R.id.button6);
+        botonConsulta.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                consultar();
+            }
+        });
 
         Button botonProgreso = (Button) findViewById(R.id.button7);
         botonProgreso.setOnClickListener(new View.OnClickListener() {
@@ -84,5 +90,9 @@ public class MenuActivity extends AppCompatActivity {
     private void pedirProgreso(){
         Intent pantallaPerfil =new Intent(this,ProgresoActivity.class);
         startActivity(pantallaPerfil);
+    }
+    private void consultar(){
+        Intent pantallaConsulta =new Intent(this,ConsultaAlimentos.class);
+        startActivity(pantallaConsulta);
     }
 }
