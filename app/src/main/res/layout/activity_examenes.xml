@@ -59,7 +59,7 @@
                         android:layout_weight="1"
                         android:gravity="center_horizontal"
                         android:text="Ingresa tus exámenes médicos"
-                        android:textColor="@android:color/background_dark"/>
+                        android:textColor="@android:color/background_dark" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -375,8 +375,8 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_weight="1"
-                android:theme="@style/Widget.AppCompat.Button.Borderless.Colored"
-                android:text="Confirmar cambios" />
+                android:text="Confirmar cambios"
+                android:theme="@style/Widget.AppCompat.Button.Borderless.Colored" />
         </LinearLayout>
     </ScrollView>
 
