@@ -22,6 +22,8 @@ import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 
+import java.util.ArrayList;
+
 public class DesayunoActivity extends AppCompatActivity {
 
     private ImageView imagenReceta;
@@ -80,7 +82,15 @@ public class DesayunoActivity extends AppCompatActivity {
                             .centerCrop()
                             .into(imagenReceta);
                     preparacion.setText(receta.getDescripcion());
-                    ingredientes.setText(receta.getIngredientes());
+
+                    String bonito ="";
+                    String[] ingrts = receta.getIngredientes().split(",");
+                    for(int i=0; i<ingrts.length; i++)
+                    {
+                        bonito+=ingrts[i]+"\n";
+                    }
+
+                    ingredientes.setText(bonito);
                     nombreReceta.setText(receta.getNombre());
                 }
 
