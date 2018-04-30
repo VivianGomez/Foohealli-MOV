@@ -6,20 +6,19 @@ public class Receta {
 
     private String nombre;
     private String descripcion;
-    private String notasYrecomendaciones;
-    private ArrayList<Ingrediente> ingredientes;
-    private String comidaDelDia;
+    //private String notasYrecomendaciones;
+    //private ArrayList<Ingrediente> ingredientes;
     private String imagen;
+    private String ingredientes;
 
     public Receta() {
     }
 
-    public Receta(String nombre, String descripcion, String notasYrecomendaciones, ArrayList<Ingrediente> ingredientes, String comidaDelDia, String imagen) {
+    public Receta(String nombre, String descripcion, String notasYrecomendaciones, String ingredientes, String comidaDelDia, String imagen) {
         this.nombre = nombre;
         this.descripcion = descripcion;
-        this.notasYrecomendaciones = notasYrecomendaciones;
+     //   this.notasYrecomendaciones = notasYrecomendaciones;
         this.ingredientes = ingredientes;
-        this.comidaDelDia = comidaDelDia;
         this.imagen = imagen;
     }
 
@@ -39,30 +38,31 @@ public class Receta {
         this.descripcion = descripcion;
     }
 
-    public ArrayList<Ingrediente> getIngredientes() {
+    public String getIngredientes() {
         return ingredientes;
     }
 
-    public void setIngredientes(ArrayList<Ingrediente> ingredientes) {
+    public void setIngredientes(String ingredientes) {
         this.ingredientes = ingredientes;
     }
 
-    public String getComidaDelDia() {
-        return comidaDelDia;
-    }
+    /*
+            public ArrayList<Ingrediente> getIngredientes() {
+                return ingredientes;
+            }
 
-    public void setComidaDelDia(String comidaDelDia) {
-        this.comidaDelDia = comidaDelDia;
-    }
+            public void setIngredientes(ArrayList<Ingrediente> ingredientes) {
+                this.ingredientes = ingredientes;
+            }
 
-    public String getNotasYrecomendaciones() {
-        return notasYrecomendaciones;
-    }
+            public String getNotasYrecomendaciones() {
+                return notasYrecomendaciones;
+            }
 
-    public void setNotasYrecomendaciones(String notasYrecomendaciones) {
-        this.notasYrecomendaciones = notasYrecomendaciones;
-    }
-
+            public void setNotasYrecomendaciones(String notasYrecomendaciones) {
+                this.notasYrecomendaciones = notasYrecomendaciones;
+            }
+           */
     public String getImagen() {
         return imagen;
     }
