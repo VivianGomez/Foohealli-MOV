@@ -20,10 +20,34 @@ public class ProgresoActivity extends AppCompatActivity {
                 pedirMiCuerpo();
             }
         });
+        Button botonHabitos = (Button) findViewById(R.id.buttonHabitos);
+        botonHabitos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                pantallaHabitos();
+            }
+        });
+        Button botonMetas = (Button) findViewById(R.id.buttonMetas);
+        botonMetas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                pantallaMetas();
+            }
+        });
+
+
     }
 
     private void pedirMiCuerpo(){
         Intent pantalla =new Intent(this,MiCuerpoActivity.class);
+        startActivity(pantalla);
+    }
+    private void pantallaHabitos(){
+        Intent pantalla =new Intent(this,MejoresHabitosActivity.class);
+        startActivity(pantalla);
+    }
+    private void pantallaMetas(){
+        Intent pantalla =new Intent(this,MetasSemanalesActivity.class);
         startActivity(pantalla);
     }
 }
