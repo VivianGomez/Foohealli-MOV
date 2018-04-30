@@ -220,7 +220,7 @@ public class RegistroActivity extends AppCompatActivity{
                         currentUserDB.child("peso").setValue(weight);
                         currentUserDB.child("correo").setValue(correo);
                         currentUserDB.child("examenes").setValue(null);
-                        currentUserDB.child("estadio").setValue(0+"s");
+                        currentUserDB.child("estadio").setValue(0+"");
                         currentUserDB.child("sexo").setValue(sex);
                         pedirExamenes();
                     }else{
