@@ -136,24 +136,71 @@ public class RegistroActivity extends AppCompatActivity{
 
     private void registrarse(){
         final String nombre;
-        nombre = nombres.getText().toString().trim();
         final String apellido;
-        apellido = apellidos.getText().toString().trim();
         final int age;
-        age = Integer.parseInt(edad.getText().toString().trim());
         final int weight;
-        weight= Integer.parseInt(peso.getText().toString().trim());
         final String correo;
-        correo = email.getText().toString().trim();
         final String pass;
-        pass = clave.getText().toString().trim();
+        String t1;
+        String t2;
+        int t3;
+        int t4;
+        String t5;
+        String t6;
+        if(nombres.getText().toString().trim() != null){
+            t1 = nombres.getText().toString().trim();
+        }
+        else{
+            t1 = "";
+        }
+        if(apellidos.getText().toString().trim() != null){
+            t2 = apellidos.getText().toString().trim();
+        }
+        else{
+            t2 = "";
+        }
+        if(edad.getText().toString().trim() != null){
+            t3 = Integer.parseInt(edad.getText().toString().trim());
+        }
+        else{
+            t3 = 0;
+        }
+        if(peso.getText().toString().trim() != null){
+            t4 = Integer.parseInt(peso.getText().toString().trim());
+        }
+        else{
+            t4 = 0;
+        }
+        if(email.getText().toString().trim() != null){
+            t5 = email.getText().toString().trim();
+        }
+        else{
+            t5 = "";
+        }
+        if(clave.getText().toString().trim() != null){
+            t6 = clave.getText().toString().trim();
+        }
+        else{
+            t6 = "";
+        }
         int temp;
-        if(sexo.getText().toString().equalsIgnoreCase("Masculino")){
+        if(sexo.getText().toString().trim() != null){
+            if(sexo.getText().toString().equalsIgnoreCase("Masculino")){
+                temp = 1;
+            }else{
+                temp = 2;
+            }
+        }
+        else{
             temp = 1;
-        }else{
-            temp = 2;
         }
         final int sex = temp;
+        nombre = t1;
+        apellido = t2;
+        age = t3;
+        weight = t4;
+        correo = t5;
+        pass = t6;
         Usuario user = new Usuario(correo,nombre,apellido,age,weight,sex);
 
         if(!TextUtils.isEmpty(nombre)&&!TextUtils.isEmpty(apellido)&&!TextUtils.isEmpty(correo)&&!TextUtils.isEmpty(pass)){
