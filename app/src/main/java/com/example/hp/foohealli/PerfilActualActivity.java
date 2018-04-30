@@ -1,17 +1,17 @@
 package com.example.hp.foohealli;
 
 import android.content.Intent;
-import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class ProfileActivity extends AppCompatActivity {
+public class PerfilActualActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_profile);
+        setContentView(R.layout.activity_perfil_actual);
 
         Button botonCuerpo = (Button) findViewById(R.id.button);
         botonCuerpo.setOnClickListener(new View.OnClickListener() {
@@ -23,7 +23,7 @@ public class ProfileActivity extends AppCompatActivity {
     }
 
     private void cambiar(){
-        Intent pantalla =new Intent(this,PerfilActualActivity.class);
+        Intent pantalla =new Intent(this,ProfileActivity.class);
         startActivity(pantalla);
     }
 }

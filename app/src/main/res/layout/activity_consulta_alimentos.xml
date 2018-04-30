@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ConsultaAlimentos">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="295dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/alimentoBusqueda"
+                android:layout_width="352dp"
+                android:layout_height="wrap_content"
+                android:hint="Ej. Aguacate" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:id="@+id/butBusqueAli"
+            android:layout_width="wrap_content"
+            android:layout_height="59dp"
+            android:layout_weight="1"
+            android:drawableTop="@android:drawable/ic_search_category_default" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/fotoAlimento"
+        android:layout_width="match_parent"
+        android:layout_height="194dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="61dp"
+        android:layout_weight="1" />
+
+</RelativeLayout>

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Examenes">
+    tools:context=".ExamenesActualesActivity">
 
     <ScrollView
         android:layout_width="368dp"
@@ -58,7 +58,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center_horizontal"
-                        android:text="Ingresa tus exámenes médicos"
+                        android:text="Tus exámenes médicos actuales"
                         android:textColor="@android:color/background_dark" />
                 </LinearLayout>
 
@@ -76,12 +76,14 @@
                         android:textColor="@android:color/background_dark" />
 
                     <EditText
-                        android:id="@+id/txt_albumina"
+                        android:id="@+id/editText7"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:ems="10"
-                        android:inputType="numberDecimal" />
+                        android:enabled="false"
+                        android:inputType="textPersonName"
+                        android:text="4" />
 
                 </LinearLayout>
 
@@ -104,7 +106,9 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:ems="10"
-                        android:inputType="numberDecimal" />
+                        android:enabled="false"
+                        android:inputType="textPersonName"
+                        android:text="123" />
 
                 </LinearLayout>
 
@@ -127,7 +131,9 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:ems="10"
-                        android:inputType="numberDecimal" />
+                        android:enabled="false"
+                        android:inputType="textPersonName"
+                        android:text="147" />
 
                 </LinearLayout>
 
@@ -150,7 +156,9 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:ems="10"
-                        android:inputType="numberDecimal" />
+                        android:enabled="false"
+                        android:inputType="textPersonName"
+                        android:text="5" />
 
                 </LinearLayout>
 
@@ -173,7 +181,9 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:ems="10"
-                        android:inputType="numberDecimal" />
+                        android:enabled="false"
+                        android:inputType="textPersonName"
+                        android:text="7" />
 
                 </LinearLayout>
 
@@ -196,7 +206,9 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:ems="10"
-                        android:inputType="numberDecimal" />
+                        android:enabled="false"
+                        android:inputType="textPersonName"
+                        android:text="130" />
 
                 </LinearLayout>
 
@@ -219,7 +231,9 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:ems="10"
-                        android:inputType="numberDecimal" />
+                        android:enabled="false"
+                        android:inputType="textPersonName"
+                        android:text="120/80" />
 
                 </LinearLayout>
 
@@ -242,7 +256,9 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:ems="10"
-                        android:inputType="numberDecimal" />
+                        android:enabled="false"
+                        android:inputType="textPersonName"
+                        android:text="1" />
 
                 </LinearLayout>
 
@@ -265,7 +281,9 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:ems="10"
-                        android:inputType="numberDecimal" />
+                        android:enabled="false"
+                        android:inputType="textPersonName"
+                        android:text="177" />
 
                 </LinearLayout>
 
@@ -288,7 +306,9 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:ems="10"
-                        android:inputType="numberDecimal" />
+                        android:enabled="false"
+                        android:inputType="textPersonName"
+                        android:text="200" />
 
                 </LinearLayout>
 
@@ -311,7 +331,9 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:ems="10"
-                        android:inputType="numberDecimal" />
+                        android:enabled="false"
+                        android:inputType="textPersonName"
+                        android:text="7" />
 
                 </LinearLayout>
 
@@ -334,7 +356,10 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:ems="10"
-                        android:inputType="numberDecimal" />
+
+                        android:enabled="false"
+                        android:inputType="textPersonName"
+                        android:text="3"/>
 
                 </LinearLayout>
 
@@ -358,32 +383,10 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:ems="10"
-                        android:inputType="numberDecimal" />
 
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:id="@+id/textView24"
-                        android:layout_width="215dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Si conoces tu estadío ingrésalo aquí"
-                        android:textColor="@android:color/background_dark" />
-
-
-                    <EditText
-                        android:id="@+id/txt_estadio"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:ems="10"
-                        android:inputType="number" />
+                        android:enabled="false"
+                        android:inputType="textPersonName"
+                        android:text="200"/>
 
                 </LinearLayout>
 
@@ -400,7 +403,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_weight="1"
-                android:text="Confirmar cambios"
+                android:text="Aceptar"
                 android:theme="@style/Widget.AppCompat.Button.Borderless.Colored" />
         </LinearLayout>
     </ScrollView>
