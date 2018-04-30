@@ -135,12 +135,18 @@ public class RegistroActivity extends AppCompatActivity{
     }
 
     private void registrarse(){
-        final String nombre = nombres.getText().toString().trim();
-        final String apellido = apellidos.getText().toString().trim();
-        final int age = Integer.parseInt(edad.getText().toString().trim());
-        final int weight = Integer.parseInt(peso.getText().toString().trim());
-        final String correo = email.getText().toString().trim();
-        final String pass = clave.getText().toString().trim();
+        final String nombre;
+        nombre = nombres.getText().toString().trim();
+        final String apellido;
+        apellido = apellidos.getText().toString().trim();
+        final int age;
+        age = Integer.parseInt(edad.getText().toString().trim());
+        final int weight;
+        weight= Integer.parseInt(peso.getText().toString().trim());
+        final String correo;
+        correo = email.getText().toString().trim();
+        final String pass;
+        pass = clave.getText().toString().trim();
         int temp;
         if(sexo.getText().toString().equalsIgnoreCase("Masculino")){
             temp = 1;
