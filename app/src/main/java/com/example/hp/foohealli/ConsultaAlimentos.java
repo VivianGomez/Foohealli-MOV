@@ -57,7 +57,7 @@ public class ConsultaAlimentos extends AppCompatActivity {
 
     private void buscarEnLaBase(){
         String consulta=busqueda.getText().toString().trim();
-        if(!consulta.equals(null) ){
+        if(!consulta.equals(null) && !consulta.isEmpty() ){
            mDataBase.child(consulta).addValueEventListener(new ValueEventListener() {
                @Override
                public void onDataChange(DataSnapshot dataSnapshot) {
@@ -69,9 +69,6 @@ public class ConsultaAlimentos extends AppCompatActivity {
                        else{
                            confirmacion.setImageResource(R.mipmap.rechazado);
                        }
-
-
-
                        foto = Uri.parse(alimento.getImagen());
                        Glide.with(ConsultaAlimentos.this)
                                .load(foto)

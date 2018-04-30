@@ -67,12 +67,12 @@ public class MenuActivity extends AppCompatActivity {
     }
 
     private void pedirExamenes(){
-        Intent pantallaExamenes =new Intent(this,Examenes.class);
+        Intent pantallaExamenes =new Intent(this,ExamenesActualesActivity.class);
         startActivity(pantallaExamenes);
     }
 
     private void pedirPerfil(){
-        Intent pantallaPerfil =new Intent(this,ProfileActivity.class);
+        Intent pantallaPerfil =new Intent(this,PerfilActualActivity.class);
         startActivity(pantallaPerfil);
     }
 

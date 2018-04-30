@@ -1,29 +1,29 @@
 package com.example.hp.foohealli;
 
 import android.content.Intent;
-import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class ProfileActivity extends AppCompatActivity {
+public class ExamenesActualesActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_profile);
+        setContentView(R.layout.activity_examenes_actuales);
 
-        Button botonCuerpo = (Button) findViewById(R.id.button);
+        Button botonCuerpo = (Button) findViewById(R.id.btn_enviar);
         botonCuerpo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                cambiar();
+                regresar();
             }
         });
     }
 
-    private void cambiar(){
-        Intent pantalla =new Intent(this,PerfilActualActivity.class);
+    private void regresar(){
+        Intent pantalla =new Intent(this,MenuActivity.class);
         startActivity(pantalla);
     }
 }

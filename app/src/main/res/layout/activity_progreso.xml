@@ -69,6 +69,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:background="#deffbb33"
                 android:text="Mi cuerpo"
                 tools:background="#deffbb33" />
         </LinearLayout>
@@ -79,11 +80,12 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/button9"
+                android:id="@+id/buttonHabitos"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="Avances"
+                android:background="#c7ff8800"
+                android:text="Mejores hábitos"
                 tools:background="#c7ff8800" />
         </LinearLayout>
         <LinearLayout
@@ -92,7 +94,7 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/button10"
+                android:id="@+id/buttonMetas"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
