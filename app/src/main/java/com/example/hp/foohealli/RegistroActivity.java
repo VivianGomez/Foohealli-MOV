@@ -168,6 +168,7 @@ public class RegistroActivity extends AppCompatActivity{
                         currentUserDB.child("correo").setValue(correo);
                         currentUserDB.child("examenes").setValue(null);
                         currentUserDB.child("estadio").setValue(0+"s");
+                        currentUserDB.child("sexo").setValue(sex);
                         pedirExamenes();
                     }else{
                         Log.i("REGISTRO","No fué posible regstrar el usuario");
