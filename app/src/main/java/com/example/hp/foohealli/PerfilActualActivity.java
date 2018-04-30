@@ -81,6 +81,27 @@ public class PerfilActualActivity extends AppCompatActivity {
             }
         });
 
+        currentUserDB.child("sexo").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                Object pSexo= dataSnapshot.getValue();
+
+if(pSexo.toString().equals("1")){
+    sexo.setText("Masculino");
+}
+else{
+    sexo.setText("Femenino");
+}
+
+
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+
 
 
 
