@@ -20,6 +20,22 @@ public class RecetasActivity extends AppCompatActivity {
                 iraDesayuno();
             }
         });
+
+        Button almuerzo = (Button) findViewById(R.id.irAalmuerzo);
+        almuerzo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                iraAlmuerzo();
+            }
+        });
+
+        Button cena = (Button) findViewById(R.id.irAcena);
+        cena.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                iraCena();
+            }
+        });
     }
 
     public void iraDesayuno()
@@ -27,6 +43,20 @@ public class RecetasActivity extends AppCompatActivity {
         Intent desayuno = new Intent(this,DesayunoActivity.class);
         startActivity(desayuno);
     }
+
+    public void iraAlmuerzo()
+    {
+        Intent almuerzo = new Intent(this,Almuerzo.class);
+        startActivity(almuerzo);
+    }
+
+    public void iraCena()
+    {
+        Intent cena = new Intent(this,Cena.class);
+        startActivity(cena);
+    }
+
+
 
 
 }

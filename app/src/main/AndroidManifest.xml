@@ -40,7 +40,9 @@
         <activity android:name=".ExamenesActualesActivity" />
         <activity android:name=".MejoresHabitosActivity" />
         <activity android:name=".MetasSemanalesActivity" />
-        <activity android:name=".DesayunoActivity"></activity>
+        <activity android:name=".DesayunoActivity" />
+        <activity android:name=".Almuerzo" />
+        <activity android:name=".Cena"></activity>
     </application>
 
 </manifest>
