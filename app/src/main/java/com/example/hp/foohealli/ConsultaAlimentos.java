@@ -1,7 +1,9 @@
 package com.example.hp.foohealli;
 
+import android.content.DialogInterface;
 import android.net.Uri;
 import android.support.design.widget.TextInputEditText;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -56,13 +58,14 @@ public class ConsultaAlimentos extends AppCompatActivity {
     }
 
     private void buscarEnLaBase(){
-        String consulta=busqueda.getText().toString().trim();
+        final String consulta=busqueda.getText().toString().trim();
         if(!consulta.equals(null) && !consulta.isEmpty() ){
            mDataBase.child(consulta).addValueEventListener(new ValueEventListener() {
                @Override
                public void onDataChange(DataSnapshot dataSnapshot) {
                    Alimento alimento= dataSnapshot.getValue(Alimento.class);
                    if(alimento!=null) {
+
                        if(alimento.getPotasio()<=250.0){
                            confirmacion.setImageResource(R.mipmap.aprobado);
                        }
@@ -164,6 +167,9 @@ public class ConsultaAlimentos extends AppCompatActivity {
                        valor = (TextView) findViewById(R.id.ValorVitaminaC);
                        valor.setText(alimento.getVitaminaC() + "");
                    }
+                   else{
+                       error(consulta);
+                   }
                }
 
                @Override
@@ -176,6 +182,20 @@ public class ConsultaAlimentos extends AppCompatActivity {
 
 
     }
+    public void error(String alimento){
+        AlertDialog.Builder alimentoNoExiste= new AlertDialog.Builder(this);
+        alimentoNoExiste.setMessage("Lo sentimos el alimeto "+alimento+ " no se encuentra disponible en este momento" );
+        alimentoNoExiste.setTitle("Alimento no encontrado");
+        alimentoNoExiste.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.cancel();
+            }
+        });
+        AlertDialog dialog=alimentoNoExiste.create();
+        dialog.show();
+    }
+
 
 
 }
