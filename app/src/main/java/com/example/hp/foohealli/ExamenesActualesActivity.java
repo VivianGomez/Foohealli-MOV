@@ -65,19 +65,19 @@ public class ExamenesActualesActivity extends AppCompatActivity {
             public void onDataChange(DataSnapshot dataSnapshot) {
             ExamenesMedicos examenes=dataSnapshot.getValue(ExamenesMedicos.class);
                 if(examenes!=null) {
-                    albumina.setText(examenes.getAlbumina()+"");
-                    sodio.setText(examenes.getSodio()+"");
-                    tfg.setText(examenes.getTGF()+"");
-                    potasio.setText(examenes.getPotasio()+"");
-                    acidoUrico.setText(examenes.getAcidoUrico()+"");
-                    proteinasOrina.setText(examenes.getProteinasOrina()+"");
-                    presionArterial.setText(examenes.getPresionArterial()+"");
-                    creatinina.setText(examenes.getCreatinina()+"");
-                    glucosa.setText(examenes.getGlucosa()+"");
-                    trigliceridos.setText(examenes.getTrigliceridos()+"");
-                    nitrogenoUreico.setText(examenes.getNitrogenoUreico()+"");
-                    fosforo.setText(examenes.getFosforo()+"");
-                    colesterolTotal.setText(examenes.getColesterolTotal()+"");
+                    albumina.setText(examenes.getAlbumina()+" gr/dL");
+                    sodio.setText(examenes.getSodio()+" ml/min");
+                    tfg.setText(examenes.getTGF()+" gr");
+                    potasio.setText(examenes.getPotasio()+" mEq/L");
+                    acidoUrico.setText(examenes.getAcidoUrico()+" mg/dL");
+                    proteinasOrina.setText(examenes.getProteinasOrina()+" mg/dL");
+                    presionArterial.setText(examenes.getPresionArterial()+" mm Hg");
+                    creatinina.setText(examenes.getCreatinina()+" ml/m");
+                    glucosa.setText(examenes.getGlucosa()+" mg/dL");
+                    trigliceridos.setText(examenes.getTrigliceridos()+" mg/dL");
+                    nitrogenoUreico.setText(examenes.getNitrogenoUreico()+" mg/dL");
+                    fosforo.setText(examenes.getFosforo()+" mg/dL");
+                    colesterolTotal.setText(examenes.getColesterolTotal()+" mg/dL");
                     }
 
             }
