@@ -25,36 +25,8 @@
             app:srcCompat="@mipmap/corazon" />
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-        </LinearLayout>
-
-        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="13dp"
+            android:layout_height="30dp"
             android:orientation="horizontal">
 
         </LinearLayout>
@@ -67,10 +39,11 @@
             <Button
                 android:id="@+id/desayuno"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_height="100dp"
                 android:layout_weight="1"
                 android:background="#c04acdf9"
-                android:text="DESAYUNO" />
+                android:text="DESAYUNO"
+                android:textSize="20sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -81,10 +54,11 @@
             <Button
                 android:id="@+id/button9"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_height="100dp"
                 android:layout_weight="1"
                 android:background="#c5c6f33d"
-                android:text="ALMUERZO" />
+                android:text="ALMUERZO"
+                android:textSize="20sp" />
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -94,10 +68,11 @@
             <Button
                 android:id="@+id/button10"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_height="100dp"
                 android:layout_weight="1"
                 android:background="#d692c52e"
-                android:text="CENA" />
+                android:text="CENA"
+                android:textSize="20sp" />
         </LinearLayout>
 
 

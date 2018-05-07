@@ -25,36 +25,8 @@
             app:srcCompat="@mipmap/corazon" />
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-        </LinearLayout>
-
-        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="13dp"
+            android:layout_height="30dp"
             android:orientation="horizontal">
 
         </LinearLayout>
@@ -67,10 +39,11 @@
             <Button
                 android:id="@+id/button8"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_height="100dp"
                 android:layout_weight="1"
                 android:background="#deffbb33"
                 android:text="Mi cuerpo"
+                android:textSize="20sp"
                 tools:background="#deffbb33" />
         </LinearLayout>
 
@@ -82,10 +55,11 @@
             <Button
                 android:id="@+id/buttonHabitos"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_height="100dp"
                 android:layout_weight="1"
                 android:background="#c7ff8800"
                 android:text="Mejores hábitos"
+                android:textSize="20sp"
                 tools:background="#c7ff8800" />
         </LinearLayout>
         <LinearLayout
@@ -96,12 +70,14 @@
             <Button
                 android:id="@+id/buttonMetas"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_height="100dp"
                 android:layout_weight="1"
                 android:background="#c7eb2929"
-                android:text="Metas semanales" />
+                android:text="Metas semanales"
+                android:textSize="20sp" />
         </LinearLayout>
 
 
     </LinearLayout>
+
 </android.support.constraint.ConstraintLayout>

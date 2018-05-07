@@ -1,5 +1,6 @@
 package com.example.hp.foohealli;
 
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.support.design.widget.TextInputEditText;
 import android.support.v7.app.AppCompatActivity;
@@ -32,13 +33,19 @@ public class DesayunoActivity extends AppCompatActivity {
     private TextView nombreReceta;
     private TextView preparacion;
     private TextView ingredientes;
+    private TextView desayuno;
+    private Typeface ananda;
     private Uri foto;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_desayuno);
+        String fuente1= "fuentes/AnandaNegrilla.ttf";
+        this.ananda=Typeface.createFromAsset(getAssets(),fuente1);
 
+desayuno = (TextView) findViewById(R.id.Desayuno);
+desayuno.setTypeface(ananda);
         imagenReceta= (ImageView) findViewById(R.id.fotoReceta);
         mStorage= FirebaseStorage.getInstance().getReference();
         preparacion = (TextView)  findViewById(R.id.preparacion);
